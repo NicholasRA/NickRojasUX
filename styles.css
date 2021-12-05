@@ -1,0 +1,132 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    margin: 50px auto;
+    width: 1000px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 12vh;
+    background-color: #2399F5;
+    font-family: 'Spartan', sans-serif;
+}
+
+.title {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+
+.text {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+.logo {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 22px;
+    font-family: 'Spartan', sans-serif;
+}
+
+.logo a {
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s ease 0s;
+}
+
+.logo a:hover {
+    text-decoration: none;
+    color: #556673;
+}
+
+.nav_links {
+    display: flex;
+    justify-content: space-around;
+    width: 25%;
+}
+
+.nav_links li {
+    list-style: none;
+}
+
+.nav_links a {
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-size: 16px;
+    color: white;
+    transition: all 0.3s ease 0s;
+}
+
+.nav_links a:hover {
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-size: 16px;
+    color: #556673;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+}
+
+footer {
+    background-color: #2399F5;
+    color: white;
+    justify-content: space-around;
+    min-height: 6vh;
+    align-items: center;
+    display: flex;
+    font-family: 'Spartan', sans-serif;
+}
+
+@media screen and (max-width:1024px) {
+    .nav_links {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width:768px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .nav_links {
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        background-color: #2399F5;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+
+
+    .burger {
+        display: block;
+    }
+
+    }
+
+    .nav_active {
+        transform: translateX(0%);
+    }
